@@ -23,7 +23,7 @@ const ThirdExample = () => {
         margin: '50px',
       }}
     >
-      <ArcherContainer noCurves strokeColor="red">
+      <ArcherContainer lineStyle="angle" strokeColor="red">
         <div style={rootStyle}>
           <ArcherElement
             id="root"

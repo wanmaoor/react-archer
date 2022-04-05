@@ -46,7 +46,6 @@ export type LineType = {
   strokeColor?: string;
   strokeWidth?: number;
   strokeDasharray?: string;
-  noCurves?: boolean;
   startMarker?: boolean;
   endMarker?: boolean;
   lineStyle?: string;

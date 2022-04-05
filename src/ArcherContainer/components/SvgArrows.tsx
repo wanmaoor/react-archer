@@ -16,8 +16,7 @@ interface CommonProps {
   strokeColor: NonNullable<ArcherContainerProps['strokeColor']>;
   strokeWidth: NonNullable<ArcherContainerProps['strokeWidth']>;
   strokeDasharray: ArcherContainerProps['strokeDasharray'];
-  noCurves: ArcherContainerProps['noCurves'];
-  lineStyle: ArcherContainerProps['lineStyle'];
+  lineStyle: NonNullable<ArcherContainerProps['lineStyle']>;
   offset: ArcherContainerProps['offset'];
   uniqueId: string;
   refs: Record<string, HTMLElement>;
@@ -38,8 +37,7 @@ const AdaptedArrow = (
   const newStrokeColor = style.strokeColor || props.strokeColor;
   const newStrokeWidth = style.strokeWidth || props.strokeWidth;
   const newStrokeDasharray = style.strokeDasharray || props.strokeDasharray;
-  const newNoCurves = !!(style.noCurves || props.noCurves);
-  const newLineStyle = style.lineStyle || props.lineStyle || (newNoCurves ? 'angle' : 'curve');
+  const newLineStyle = style.lineStyle || props.lineStyle;
   const newOffset = props.offset || 0;
   const startingAnchorOrientation = props.source.anchor;
 
@@ -105,7 +103,6 @@ export const SvgArrows = (
           strokeColor={props.strokeColor}
           strokeWidth={props.strokeWidth}
           strokeDasharray={props.strokeDasharray}
-          noCurves={props.noCurves}
           lineStyle={props.lineStyle}
           offset={props.offset}
           parentCoordinates={parentCoordinates}

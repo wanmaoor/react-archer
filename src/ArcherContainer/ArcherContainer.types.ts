@@ -57,11 +57,6 @@ export type ArcherContainerProps = {
 
   lineStyle?: ValidLineStyles;
 
-  /**
-   * Set this to true if you want angles instead of curves
-   */
-  noCurves?: boolean;
-
   children?: React.ReactNode | FunctionChild;
 };
 
